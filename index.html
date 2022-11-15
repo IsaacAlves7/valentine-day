@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+        <!-- FONTAWESOME 6 -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/duyplus/fontawesome-pro/css/all.css">
+        <!-- BOOTSTRAP 5 ICONS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+        <!-- UNICONS -->
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+        <!-- MaterializeCSS ICONS-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="./fav.png">
+    <title>Dia dos Pastores - IEPV</title>
+    <!-- https://pastores.isaacalves7.com/ -->
+</head>
+<body>
+    <!-- <div class="container">
+        <div class="card middle">
+            <div class="front">
+               <img src="./capa.jpg">
+            </div>
+            <div class="back">
+                <div class="back-content middle">
+                    <h2>Queridos Pastores</h2>
+                    <span class="text">Você é o (pai)stor mais incrível que já conheci, gosto muito das suas prega porque são edificacoes concretas vindas da palavra de Deus para nossas vidas, a ti sou muito grato pelo meu amadurecimento espiritual, profissional e emocional.</span>
+                    <div class="love">
+                       I &nbsp;<svg class="heart" viewBox="0 0 32 29.6"><path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/></svg>&nbsp;&nbsp;YOU!
+                    </div> 
+                    <span class="assinatura">Isaac Alves Pinheiro</span>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Prev button -->
+    <button id="prev-btn">
+        <i class="fa-solid fa-circle-arrow-left"></i>
+    </button>
+
+    <!-- Book -->
+    <div id="book" class="book">
+
+        <!-- Paper 1 = page 1-->
+        <div id="p1" class="paper"> <!-- flipped -->
+
+            <div class="front">
+                <div id="f1" class="front-content">
+                    <!-- <h2>Front 1</h2> -->
+                </div>
+            </div>
+
+            <div class="back">
+                <div id="b1" class="back-content">
+                    <h2>Queridos Pastores</h2>
+                    <p>Eu e a minha família, queremos agradecer por todo amor e carinho que os Senhores tem demonstrado para conosco.</p>
+                    <p>Por isso, queremos expressar toda nossa gratidão e amor a vocês nessa singela homenagem ao Dia dos Pastores!</p>
+                    <div class="love">
+                        NÓS &nbsp;<svg class="heart" viewBox="0 0 32 29.6"><path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/></svg>&nbsp;&nbsp;VOCÊS!
+                     </div> 
+                </div>
+            </div>
+            
+        </div>
+
+
+        <!-- Paper 2 = page 2--> 
+        <!-- Pastor Luciano Costa = Anjo da Igreja -->
+        <div id="p2" class="paper">
+
+            <div class="front">
+                <div id="f2" class="front-content">
+                    <!-- <h2>Front 2</h2> -->
+                </div>
+            </div>
+
+            <div class="back">
+                <div id="b2" class="back-content">
+                    <!-- <h2>Back 2</h2> -->
+                </div>
+            </div>
+            
+        </div>
+
+
+        <!-- Paper 3 = page 3-->
+        <!-- Pastora Ana Costa -->
+        <div id="p3" class="paper">
+            <div class="front">
+            <!-- <a href="#">Grato</a> -->
+
+                <div id="f3" class="front-content">
+                    <!-- <h2>Front 3</h2> -->
+                </div>
+            </div>
+
+            <div class="back">
+                <div id="b3" class="back-content">
+                    <!-- <h2>Back 3</h2> -->
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <!-- Next button -->
+    <button id="next-btn">
+        <i class="fa-solid fa-circle-arrow-right"></i>
+    </button>
+    <script src="main.js"></script>
+   <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+   <!-- jQuery code -->
+   <script type="text/javascript">
+    $(document).ready(function(){
+        $('a').click(function(){
+            $('a').toggleClass('active')
+        })
+    })
+   </script>
+</body>
+</html>
