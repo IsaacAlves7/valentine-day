@@ -17,109 +17,116 @@
     <title>Dia dos Pastores - IEPV</title>
     <!-- https://pastores.isaacalves7.com/ -->
 </head>
-<body>
-    <!-- <div class="container">
-        <div class="card middle">
-            <div class="front">
-               <img src="./capa.jpg">
-            </div>
-            <div class="back">
-                <div class="back-content middle">
-                    <h2>Queridos Pastores</h2>
-                    <span class="text">Você é o (pai)stor mais incrível que já conheci, gosto muito das suas prega porque são edificacoes concretas vindas da palavra de Deus para nossas vidas, a ti sou muito grato pelo meu amadurecimento espiritual, profissional e emocional.</span>
-                    <div class="love">
-                       I &nbsp;<svg class="heart" viewBox="0 0 32 29.6"><path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/></svg>&nbsp;&nbsp;YOU!
-                    </div> 
-                    <span class="assinatura">Isaac Alves Pinheiro</span>
-                </div>
+<body onload="musica();"> 
+
+<div class="container">
+
+
+<!-- Book -->
+<div id="book" class="book">
+
+    <!-- Paper 1 = page 1-->
+    <div id="p1" class="paper"> <!-- flipped -->
+
+        <div class="front">
+            <div id="f1" class="front-content">
+                <!-- <h2>Front 1</h2> -->
             </div>
         </div>
-    </div> -->
 
-    <!-- Prev button -->
-    <button id="prev-btn">
-        <i class="fa-solid fa-circle-arrow-left"></i>
-    </button>
-
-    <!-- Book -->
-    <div id="book" class="book">
-
-        <!-- Paper 1 = page 1-->
-        <div id="p1" class="paper"> <!-- flipped -->
-
-            <div class="front">
-                <div id="f1" class="front-content">
-                    <!-- <h2>Front 1</h2> -->
-                </div>
+        <div class="back">
+            <div id="b1" class="back-content">
+                <h2>Queridos Pastores</h2>
+                <p>Eu e a minha família, queremos agradecer por todo amor e carinho que os Senhores tem demonstrado para conosco.</p>
+                <p>Por isso, queremos expressar toda nossa gratidão e amor a vocês nessa singela homenagem ao Dia dos Pastores!</p>
+                <div class="love">
+                    NÓS &nbsp;<svg class="heart" viewBox="0 0 32 29.6"><path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/></svg>&nbsp;&nbsp;VOCÊS!
+                 </div> 
+                 <sub>Isaac Alves Pinheiro</sub>
             </div>
-
-            <div class="back">
-                <div id="b1" class="back-content">
-                    <h2>Queridos Pastores</h2>
-                    <p>Eu e a minha família, queremos agradecer por todo amor e carinho que os Senhores tem demonstrado para conosco.</p>
-                    <p>Por isso, queremos expressar toda nossa gratidão e amor a vocês nessa singela homenagem ao Dia dos Pastores!</p>
-                    <div class="love">
-                        NÓS &nbsp;<svg class="heart" viewBox="0 0 32 29.6"><path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/></svg>&nbsp;&nbsp;VOCÊS!
-                     </div> 
-                </div>
-            </div>
-            
         </div>
-
-
-        <!-- Paper 2 = page 2--> 
-        <!-- Pastor Luciano Costa = Anjo da Igreja -->
-        <div id="p2" class="paper">
-
-            <div class="front">
-                <div id="f2" class="front-content">
-                    <!-- <h2>Front 2</h2> -->
-                </div>
-            </div>
-
-            <div class="back">
-                <div id="b2" class="back-content">
-                    <!-- <h2>Back 2</h2> -->
-                </div>
-            </div>
-            
-        </div>
-
-
-        <!-- Paper 3 = page 3-->
-        <!-- Pastora Ana Costa -->
-        <div id="p3" class="paper">
-            <div class="front">
-            <!-- <a href="#">Grato</a> -->
-
-                <div id="f3" class="front-content">
-                    <!-- <h2>Front 3</h2> -->
-                </div>
-            </div>
-
-            <div class="back">
-                <div id="b3" class="back-content">
-                    <!-- <h2>Back 3</h2> -->
-                </div>
-            </div>
-            
-        </div>
-
+        
     </div>
 
-    <!-- Next button -->
-    <button id="next-btn">
-        <i class="fa-solid fa-circle-arrow-right"></i>
-    </button>
-    <script src="main.js"></script>
-   <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
-   <!-- jQuery code -->
-   <script type="text/javascript">
+
+    <!-- Paper 2 = page 2--> 
+    <!-- Pastor Luciano Costa = Anjo da Igreja -->
+    <div id="p2" class="paper">
+
+        <div class="front">
+            <div id="f2" class="front-content" id="prev-btn" id="next-btn">
+                <!-- <h2>Front 2</h2> -->
+            </div>
+        </div>
+
+        <div class="back">
+            <div id="b2" class="back-content">
+                <!-- <h2>Back 2</h2> -->
+            </div>
+        </div>
+        
+    </div>
+
+
+    <!-- Paper 3 = page 3-->
+    <!-- Pastora Ana Costa -->
+    <div id="p3" class="paper">
+        <div class="front">
+
+            <div id="f3" class="front-content">
+                <!-- <h2>Front 3</h2> -->
+            </div>
+        </div>
+
+        <div class="back">
+            <a href="#">Grato</a>
+
+            <div id="b3" class="back-content">
+                <!-- <h2>Back 3</h2> -->
+                <div class="ovelhas">
+                    <img src="./ovelha.png" height="57">
+                    <img src="./ovelha.png" height="57">
+                    <img src="./ovelha.png" height="57">
+                    <img src="./ovelha.png" height="57">
+                </div>
+                <h3>Eis ai os pastores que amam cuidar de ovelhas!</h3>
+                <blockquote>"A palavra do Senhor veio a mim, dizendo: "Antes de formá-lo no ventre
+                    eu o escolhi;
+                    antes de você nascer, eu o separei
+                    e o designei profeta às nações."
+                </blockquote>
+                <sub>Jeremias 1:4-5</sub>
+            </div>
+        </div>
+        
+    </div>
+
+</div>
+
+<div class="navigation">
+<!-- Prev button -->
+<button id="prev-btn">
+    <i class="fa-solid fa-circle-arrow-left"></i>
+</button>
+
+<!-- Next button -->
+<button id="next-btn">
+    <i class="fa-solid fa-circle-arrow-right"></i>
+</button>
+</div>
+
+</div>
+    
+<script src="main.js"></script>
+<!-- jQuery code -->
+<script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+<script type="text/javascript">
     $(document).ready(function(){
-        $('a').click(function(){
-            $('a').toggleClass('active')
-        })
+      $('a').click(function(){
+        $('a').toggleClass('active')
+      })
     })
-   </script>
+</script>
+
 </body>
 </html>

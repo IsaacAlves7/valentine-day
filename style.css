@@ -22,8 +22,12 @@ body{
 .book{
     /* border: 1px solid black; */
     position: relative;
-    width: 295px;
-    height: 365px;
+    width: 100%;
+    max-width: 295px;
+    min-height: 365px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .paper{
@@ -50,6 +54,7 @@ body{
     -moz-transition: transform 0.5s;
     -ms-transition: transform 0.5s;
     -o-transition: transform 0.5s;
+    box-shadow: 2px 2px 5px rgba(43, 43, 43, 0.09);
 }
 
 .front{
@@ -61,19 +66,19 @@ body{
 
 .front #f1{
     background-image: url('./capa.jpg');
-    background-position: cover;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.front #f2{
-    background-image: url('./1.jpg');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+.front #f2{
+    background-image: url('./4.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .front #f3{
     background-image: url('./2.jpg');
@@ -93,6 +98,17 @@ body{
 
 .back #b3{
     background: #000;
+    color: #fff;
+    font-size: 11px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 20%;
+}
+
+blockquote{
+    padding: 10px;
 }
 
 .back{
@@ -143,8 +159,17 @@ button:hover i {
 }
 
 i {
-    font-size: 50px;
-    color: #000;
+    font-size: 27px;
+    color: #ffffff72;
+    filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.489));
+    -webkit-filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.489));
+}
+
+.navigation{
+    /* flex-direction: column; */
+    top: 67%;
+    position: absolute;
+    z-index: 5;
 }
 
 #p1{
@@ -160,112 +185,23 @@ i {
 }
 
 p{
-    padding-left: 17px;
-    padding-right: 17px;
+    padding-left: 20px;
+    padding-right: 20px;
     padding-bottom: 7px;
     padding-top: 7px;
+    text-align: left;
 }
 
-/* 
-.middle{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
+.ovelhas{
+    display: flex;
+    flex-direction: row;
 }
-
-.card{
-    cursor: pointer;
-    width: 297px;
-    height: 297px;
-}
-
-.card:hover > .front{
-    transform: perspective(600px) rotateY(-180deg);
-    -webkit-transform: perspective(600px) rotateY(-180deg);
-    -moz-transform: perspective(600px) rotateY(-180deg);
-    -ms-transform: perspective(600px) rotateY(-180deg);
-    -o-transform: perspective(600px) rotateY(-180deg);
-}
-
-
-.card:hover > .back{
-    transform: perspective(600px) rotateY(0deg);
-    -webkit-transform: perspective(600px) rotateY(0deg);
-    -moz-transform: perspective(600px) rotateY(0deg);
-    -ms-transform: perspective(600px) rotateY(0deg);
-    -o-transform: perspective(600px) rotateY(0deg);
-}
-
-.front,.back{
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    position: absolute;
-    transition: transform .6s linear;
-    -webkit-transition: transform .6s linear;
-    -moz-transition: transform .6s linear;
-    -ms-transition: transform .6s linear;
-    -o-transition: transform .6s linear;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-}
-
-.front img{
-    height: 100%;
-}
-.front{
-    transform: perspective(600px) rotateY(0deg);
-    -webkit-transform: perspective(600px) rotateY(0deg);
-    -moz-transform: perspective(600px) rotateY(0deg);
-    -ms-transform: perspective(600px) rotateY(0deg);
-    -o-transform: perspective(600px) rotateY(0deg);
-}
-.back{
-    background: #f1f1f1;
-    transform: perspective(600px) rotateY(180deg);
-    -webkit-transform: perspective(600px) rotateY(180deg);
-    -moz-transform: perspective(600px) rotateY(180deg);
-    -ms-transform: perspective(600px) rotateY(180deg);
-    -o-transform: perspective(600px) rotateY(180deg);
-} */
-
-/* 
-.back-content{
-    color: #000;
-    font-family: Arial, Helvetica, sans-serif;
-    width: 100%;
-    padding: 20px;
-    text-align: justify;
-}
-
-.back-content span.text{
-    font-size: small;
-}
-
-.back-content h2{
-    text-align: center;
-    font-family: 'Lobster Two', cursive;
-    width: 100%;
-    margin-bottom: 12px;
-} */
 
 .container{
-    flex-direction: column;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    width: 100%;
+    width: 980px;
 }
 
 .love{
@@ -283,26 +219,11 @@ p{
     font-weight: 800;
 }
 
-.assinatura{
-    font-weight: 100;
-    margin-top: 12px;
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    justify-content: center;
-    font-size: xx-small;
-}
-
-figure, figcaption{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
-    margin-top: 200px;
-}
-
 h2{
     margin-top: 17px;
     text-align: center;
     position: relative;
-    left: 24%;
+    left: 26.7%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -310,6 +231,16 @@ h2{
     -o-transform: translate(-50%, -50%);
     font-family: 'Lobster Two', cursive;
     z-index: 4;
+}
+
+h3{
+    font-family: 'Lobster Two', cursive;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
 .heart {
@@ -348,30 +279,37 @@ article {
     color: #fff;
 }
 
-/*--------------------------------------------------------------------------- */
+/* Heart Button = GRATO */
 
 a{
     font-family: Arial, Helvetica, sans-serif;
     position: absolute;
-    top: 77%;
-    left: 50%;
+    top: 65%;
+    right: 15%;
     transform: translate(-50%,-50%);
     width: 200px;
+    min-width: min-content;
+    min-height: min-content;
     height: 75px;
-    background-color: #000;
+    background-color: #fff;
     border-radius: 75px;
     line-height: 75px;
     text-align: center;
     text-decoration: none;
-    color: #fff;
-    transform: translate(-50%,-50%);
-    transition: 0s;
+    color: #000;
+    /*transform: translate(-50%,-50%);
+    */transition: 0s;
     text-transform: uppercase;
     z-index: 4;
     -webkit-transition: 0s;
     -moz-transition: 0s;
     -ms-transition: 0s;
     -o-transition: 0s;
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
 }
 
 a:hover{
@@ -382,6 +320,7 @@ a:hover{
     -ms-transition: 0.1s linear;
     -o-transition: 0.1s linear;
     z-index: 100;
+    color: #fff;
 }
 
 a.active{
@@ -423,7 +362,6 @@ a.active:before{
     -o-transform: translateX(0) rotate(35deg);
 }
 
-
 a:after{
     content: '';
     position: absolute;
@@ -454,7 +392,7 @@ a.active:after{
        -o-transform: translateX(0) rotate(-35deg);
 }
 
-/* -------------------------------------------------------------------- */
+/* Hearts Animation with onmousemove */
 
 article::before{
     content: '';
@@ -481,5 +419,49 @@ article::before{
         -moz-transform: translate(300px) rotate(360deg);
         -ms-transform: translate(300px) rotate(360deg);
         -o-transform: translate(300px) rotate(360deg);
+    }
+}
+
+/* Media Queries + Breakpoints = Responsive Layout */
+@media screen and (max-width: 500px){
+    .container .book{
+        min-height: 300px;
+        width: 200px;
+    }
+
+    p{
+        font-size: 10px;
+    }
+
+    .love{
+        font-size: medium;
+    }
+
+    .heart{
+        width: 17px;
+    }
+
+    h2{
+        font-size: medium;
+    }
+
+    sub{
+        font-size: xx-small;
+    }
+
+    .ovelhas img{
+        height: 37px;
+    }
+
+    .back a{
+       right: 0;
+       top: 57%;
+       font-size: 12px;
+       min-height: min-content;
+       min-width: min-content;
+    }
+
+    blockquote{
+        display: none;
     }
 }

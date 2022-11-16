@@ -105,3 +105,10 @@ function goPrevPage() {
         currentLocation--;
     }
 }
+
+// Música de fundo!
+function musica(){
+    const music = new Audio();
+    music.src = "./music.mp4";
+    music.play();
+}
