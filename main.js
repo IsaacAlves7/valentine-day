@@ -15,7 +15,6 @@ document.addEventListener("mousemove", function(e){ // funcão de evento movimen
     heart.style.transform = 'rotate('+ transformValue + 'deg)';
 
     body.appendChild(heart); //corpo heranca de filho por coracao
-
     setTimeout(function(){ // definindo o tempo para remover os coracoes filhos
         heart.remove();
     },1000)
